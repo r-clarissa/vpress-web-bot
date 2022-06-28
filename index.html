@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WordPress AutoViewer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+    function open_url(){
+        var url = document.getElementById('new_url').value;
+        url = url.trim();
+        var w = window.open(url, '_blank');
+        return w;
+    }
+    async function loopOpenUrl(){
+        var cycle = document.getElementById('cycle').value;
+        for (var i = 0; i < cycle; i++){
+            var w = open_url();
+            console.log(i+1);           
+            await sleep(5000); 
+            w.close();
+        }
+        disableButton(false);
+    }
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve,ms));
+    }
+    function disableButton(isDisable){
+        var startBtn = document.getElementById('startBtn');
+        startBtn.disabled = isDisable;
+    }     
+    </script>
+</head>
+
+    <body>
+        <div class="panel">
+            <h1> V P R E S S B O T </h1>
+            <form>
+                <h3>One Click, Multiple Visits</h3>     
+                <div class="form-group">   
+                    <input type="text" placeholder="URL" id='new_url' class="form-input"> <br><br>
+                    <input type="number" placeholder="Cycle" id='cycle' class="form-input"> <br><br>
+                </div>
+
+                <input type='button' id="startBtn" class="btn" value='Start' onclick='loopOpenUrl(); disableButton(true);' />
+            </form>
+        </div>
+    </body>
+
+
+
+</html>
