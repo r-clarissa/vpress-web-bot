@@ -9,6 +9,7 @@ This is a simple webpage for maintaining the activeness of the website hosted by
 ### Built With
 * HTML
 * CSS
+* JavaScript
 
 # Getting Started
 To get a local copy up and running, kindly follow these steps.
