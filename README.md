@@ -1,5 +1,5 @@
 # About The Project
-This is a simple webpage for maintaining the activeness of the website hosted by automated visits. Visit this [site](https://r-clarissa.github.io/vpress-web-bot/) for the live demo.
+This is a simple web service for maintaining the activeness of the website hosted by automated visits. Visit this [site](https://r-clarissa.github.io/vpress-web-bot/) for the live demo.
 
 ### Specifications
 * Accepts input URL with user's specified frequency (N) of visits
