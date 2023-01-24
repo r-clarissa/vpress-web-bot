@@ -6,7 +6,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-image: url(bg-pic.jpg);
     background-size: cover;
     font-family: 'Rajdhani', sans-serif;
 }
